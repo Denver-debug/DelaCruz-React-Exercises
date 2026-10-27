@@ -4,20 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Post extends Model
+class Message extends Model
 {
-    /** @use HasFactory<\Database\Factories\PostFactory> */
+    /** @use HasFactory<\Database\Factories\MessageFactory> */
     use HasFactory;
 
     protected $fillable = [
-        'post',
-        'description',
-        'status',
-        'user_id',
+        'message'
     ];
 
-    public function user()
+    public function users(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }

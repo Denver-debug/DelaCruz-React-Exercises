@@ -4,10 +4,10 @@ import "./styles/post.css";
 import PostCard from "./PostCard";
 
 export default function Post() {
-  const { posts, setPosts } = useState([]);
-  const { message, setMessage } = useState("");
-  const { error, setError } = useState("");
-  const { processing, setProcessing } = useState(false);
+  const [posts, setPosts] = useState([]);
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+  const [processing, setProcessing] = useState(false);
 
   useEffect(() => {
     const fetchPosts = async () => {

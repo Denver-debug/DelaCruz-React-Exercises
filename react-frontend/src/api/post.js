@@ -1,9 +1,9 @@
 import api from "./axios";
 
 export const getPost = () => {
-  return api.get("/posts");
+  return api.get("/messages");
 };
 
 export const storePost = (data) => {
-  return api.post("/posts", data);
+  return api.post("/messages", data);
 };
