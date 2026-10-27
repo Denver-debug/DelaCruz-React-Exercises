@@ -38,7 +38,7 @@ class ProductController extends Controller
 
     // Get the product id and name, ordered by price ascending. 
 
-    $productsOrderedByPrice = Product::select('id', 'name') 
+    $productsOrderedByPrice = Product::select('id', 'name', 'price') 
 
         ->orderBy('price', 'asc') 
 

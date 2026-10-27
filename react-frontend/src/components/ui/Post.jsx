@@ -4,7 +4,7 @@ import "./styles/post.css";
 import PostCard from "./PostCard";
 
 export default function Post() {
-  const { post, setPosts } = useState([]);
+  const { posts, setPosts } = useState([]);
   const { message, setMessage } = useState("");
   const { error, setError } = useState("");
   const { processing, setProcessing } = useState(false);
